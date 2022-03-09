@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+ the global variable is overwriting the variable inside the function
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +34,9 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The output of the first console.log(x) is 10 because it reads the value of the global variable (x).
+The console.log(y) throws a reference error of not defined because the variable y, is a local variable which exist only inside the function f1().
+The console.log(f1()) is undefined because there's no value.
 
 ## Question 3
 
@@ -62,3 +65,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The console.log(x) will output 9,the f1(x) is not doing anything.
+The console.log(y) will output 10 because the global object variable y was referenced inside the f2(y)
